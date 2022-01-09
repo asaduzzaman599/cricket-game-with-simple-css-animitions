@@ -1,0 +1,133 @@
+body {
+    background-color: darkslategray;
+
+}
+
+h1 {
+    padding: 0 20px;
+
+    z-index: 1;
+    top: 0;
+    text-align: right;
+    color: lightblue;
+}
+
+h1::after {
+    right: 100px;
+    position: absolute;
+    content: '';
+    animation: title-anime 5s ease-in-out 0s infinite alternate-reverse;
+}
+
+h2 {
+    color: darkolivegreen;
+}
+
+@keyframes title-anime {
+    0% {
+
+        content: ' LETS Play!!';
+    }
+
+    25% {
+        content: ' ';
+    }
+
+    50% {
+
+        content: ' LETS Play!!';
+    }
+
+    100% {
+        content: '';
+    }
+}
+
+.field {
+    margin-top: 180px;
+    border: 1px solid;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 204, 0);
+    background-color: springgreen;
+    cursor: none;
+}
+
+.bat {
+    position: relative;
+    top: -200px
+}
+
+@keyframes bat-anime {
+    0% {
+
+        transform: rotate(0deg);
+        transform-origin: top right;
+    }
+
+    25% {
+        transform: rotate(-75deg);
+        transform-origin: top right;
+    }
+
+    50% {
+
+        transform: rotate(0deg);
+        transform-origin: top right
+    }
+
+    100% {
+
+        transform: rotate(0deg);
+        transform-origin: top right;
+    }
+
+}
+
+.field:hover .bat {
+    animation: bat-anime 1.7s ease-in .5s infinite forwards;
+}
+
+.field:hover .ball {
+    animation: ball-anime 1.7s ease-in 0s infinite forwards;
+}
+
+@keyframes ball-anime {
+    0% {
+        transform: translate(670px, -100px);
+    }
+
+    25% {
+        transform: translate(300px, 0);
+    }
+
+    50% {
+
+
+        transform: translate(-25px, -100px);
+    }
+
+    100% {
+        transform: translate(900px, -250px);
+    }
+
+}
+
+.ball {
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+    top: -80px;
+    left: 616px;
+
+}
+
+.peach {
+
+    width: 600px;
+    border-top: 10px solid rgb(219, 237, 57);
+    position: relative;
+    top: -80px;
+    left: 400px;
+}
